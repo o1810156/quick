@@ -20,4 +20,19 @@ fn main() {
     let end = start.elapsed();
 
     println!("time: {}.{:03}", end.as_secs(), end.subsec_nanos() / 1000000);
+
+    // check
+    let mut flag = true;
+    for i in 0..(n-1) {
+        if v[i] > v[i+1] {
+            flag = false;
+            break;
+        }
+    }
+
+    if flag {
+        println!("ok");
+    } else {
+        println!("!!Some thing wrong!!");
+    }
 }
